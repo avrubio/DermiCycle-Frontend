@@ -1,0 +1,22 @@
+.form-container {
+  margin: 100px auto;
+  background-color: #fce7b6;
+  padding: 25px 25px 25px 25px;
+  width: 400px;
+  height: 600px;
+  border-radius: 30px;
+}
+
+.btn {
+  background-color: #f0aecf;
+  color: black;
+  border-radius: 15px;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #f7cae1;
+  color: black;
+  border-radius: 15px;
+  border: none;
+}

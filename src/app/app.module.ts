@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { CreateAccountFormComponent } from './create-account-form/create-account-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    CreateAccountFormComponent
   ],
   imports: [
     BrowserModule,
