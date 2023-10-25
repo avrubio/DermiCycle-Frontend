@@ -15,21 +15,20 @@ export class CreateAccountFormComponent implements OnInit {
     firstName: '',
     emailAddress: '',
     password: '',
-    skinCycle: '',
+    skinCyclePreference: '',
     skinType: '',
   };
-  jwt: string = '';
 
   constructor(private signupService: UserService) {}
 
   signUp(): void {
     this.signupService
       .signUp(
-        this.user.firstName,
         this.user.emailAddress,
-        this.user.password,
-        this.user.skinCycle,
-        this.user.skinType
+        this.user.firstName,
+        this.user.skinCyclePreference,
+        this.user.skinType,
+        this.user.password
       )
       .subscribe(
         (response) => {
@@ -38,6 +37,7 @@ export class CreateAccountFormComponent implements OnInit {
         (error) => {
           console.error('Account signup failed', error);
           // Handle login errors here (e.g., display an error message)
+          console.log(error);
         }
       );
   }
