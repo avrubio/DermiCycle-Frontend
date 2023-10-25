@@ -1,27 +1,15 @@
 # DermiCycleFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.5.
+DermiCycle is a skincare cycling application that allows you to track what products to use at what stage.
 
-## Development server
+## Introduction
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+ The term "skin cycling" is all about taking a cyclical approach to your facial skincare routine. Why? Using specific products on different days regenerates the skin and improves skin quality. Choose between a four-night or a three-night cycle alternates an exfoliant, retinol-based product, and hydrating cream or concentrate.  
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Features and Basics
+DermiCycle is an application designed to help users manage their skincare routines by providing a daily list of products to use respective to the stage within your skin cycling pattern. Here are the key features and basics of DermiCycle:
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Sign In: Users can create an account to save personal information and preferences, skin type, and skin cycle preference
+- Product List: The application provides a list that allows users to customize their skin cycling pattern for the entire month.
+- Product Tracking: Users can input the skincare products they have for each stage and manage their routine.
