@@ -1,47 +1,74 @@
 <section class="form-container">
-  <form>
+  <form (ngSubmit)="signUp()">
     <div class="mb-3">
       <label for="exampleInputFirstName" class="form-label">First Name</label>
-      <input type="firstName" class="form-control" id="exampleFirstName" />
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputFirstName"
+        [(ngModel)]="user.firstName"
+        name="firstName"
+      />
     </div>
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" />
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        [(ngModel)]="user.emailAddress"
+        name="emailAddress"
+      />
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" />
+      <input
+        type="password"
+        class="form-control"
+        id="exampleInputPassword1"
+        [(ngModel)]="user.password"
+        name="password"
+      />
     </div>
     <div class="mb-3">
       <label for="exampleInputSkinType" class="form-label">Skin Type</label>
-      <input type="skinType" class="form-control" id="exampleSkinType" />
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputSkinType"
+        [(ngModel)]="user.skinType"
+        name="skinType"
+      />
     </div>
     <div class="mb-3">
-      <label for="exampleInputSkinType" class="form-label"
-        >Skin Cycle Preference
-      </label>
+      <label for="exampleInputSkinCycle" class="form-label"
+        >Skin Cycle Preference</label
+      >
 
       <div class="form-check">
         <input
           class="form-check-input"
-          type="checkbox"
-          value="skinCyclePreference"
+          type="radio"
           id="flexCheckDefault"
+          value="3 day"
+          [(ngModel)]="user.skinCyclePreference"
+          name="skinCyclePreference"
         />
         <label class="form-check-label" for="flexCheckDefault">
-          3 day pattern: 1 day Exfoliate, 1 day Retnoid, 1 day Recovery
+          3 day pattern: 1 day Exfoliate, 1 day Retinoid, 1 day Recovery
         </label>
       </div>
       <div class="form-check">
         <input
           class="form-check-input"
-          type="checkbox"
-          value=""
+          type="radio"
           id="flexCheckChecked"
-          checked
+          value="4 day"
+          [(ngModel)]="user.skinCyclePreference"
+          name="skinCyclePreference"
         />
         <label class="form-check-label" for="flexCheckChecked">
-          4 day pattern: 1 day Exfoliate, 1 day Retnoid, 2 day Recovery
+          4 day pattern: 1 day Exfoliate, 1 day Retinoid, 2 day Recovery
         </label>
       </div>
     </div>
