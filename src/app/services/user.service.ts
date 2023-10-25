@@ -10,7 +10,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class UserService {
-  private apiUrl = 'http://localhost:0317/auth/users/login/';
+  private apiUrlLogin = 'http://localhost:0317/auth/users/login/';
+
+  private apiUrlSignUp = 'http://localhost:0317/auth/users/login/';
 
   constructor(private http: HttpClient) {}
 
@@ -18,6 +20,18 @@ export class UserService {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const body = { emailAddress, password };
 
-    return this.http.post(this.apiUrl, body, { headers });
+    return this.http.post(this.apiUrlLogin, body, { headers });
+  }
+  signUp(
+    firstName: string,
+    emailAddress: string,
+    password: string,
+    skinType: string,
+    skinCycle: string
+  ): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    const body = { firstName, emailAddress, password, skinType, skinCycle };
+
+    return this.http.post(this.apiUrlSignUp, body, { headers });
   }
 }
