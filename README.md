@@ -15,3 +15,5 @@ DermiCycle is an application designed to help users manage their skincare routin
 - Product Tracking: Users can input the skincare products they have for each stage and manage their routine.
 
 ## WireFrames
+
+<img src="WireFrameWelcomePage.png" />
