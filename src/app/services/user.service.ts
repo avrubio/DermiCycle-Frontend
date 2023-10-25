@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
 export class UserService {
   private apiUrlLogin = 'http://localhost:0317/auth/users/login/';
 
-  private apiUrlSignUp = 'http://localhost:0317/auth/users/login/';
+  private apiUrlSignUp = 'http://localhost:0317/auth/users/register/';
 
   constructor(private http: HttpClient) {}
 
@@ -27,10 +27,16 @@ export class UserService {
     emailAddress: string,
     password: string,
     skinType: string,
-    skinCycle: string
+    skinCyclePreference: string
   ): Observable<any> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    const body = { firstName, emailAddress, password, skinType, skinCycle };
+    const body = {
+      emailAddress,
+      firstName,
+      skinType,
+      skinCyclePreference,
+      password,
+    };
 
     return this.http.post(this.apiUrlSignUp, body, { headers });
   }
