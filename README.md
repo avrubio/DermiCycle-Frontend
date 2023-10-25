@@ -16,7 +16,7 @@ DermiCycle is an application designed to help users manage their skincare routin
 
 ## WireFrames
 
-<img src="WireFrameLogin.png"/>
+<img src="WireframeLogin.png"/>
 
 <img src="WireFrameCreateAccount.png"/>
 <img src="WireFrameWelcomePage.png" />
