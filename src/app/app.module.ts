@@ -19,6 +19,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
     LoginFormComponent,
     CreateAccountFormComponent,
     AddProductComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -26,7 +27,9 @@ import { LoginFormComponent } from './login-form/login-form.component';
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
+
   ],
+ 
   providers: [],
   bootstrap: [AppComponent],
 })
