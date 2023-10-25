@@ -6,6 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AddProductComponent } from './add-product/add-product.component';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {
   CreateAccountFormComponent,
@@ -19,7 +20,13 @@ import { LoginFormComponent } from './login-form/login-form.component';
     CreateAccountFormComponent,
     AddProductComponent,
   ],
-  imports: [BrowserModule, NgbModule, HttpClientModule, FormsModule],
+  imports: [
+    BrowserModule,
+    NgbModule,
+    HttpClientModule,
+    FormsModule,
+    AppRoutingModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
