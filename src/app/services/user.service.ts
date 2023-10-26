@@ -14,6 +14,8 @@ export class UserService {
 
   private apiUrlSignUp = 'http://localhost:0317/auth/users/register/';
 
+  private apiUrlAddProduct = 'http://localhost:0317/api/users/products/';
+
   constructor(private http: HttpClient) {}
 
   login(emailAddress: string, password: string): Observable<any> {
@@ -39,5 +41,21 @@ export class UserService {
     };
 
     return this.http.post(this.apiUrlSignUp, body, { headers });
+  }
+
+  addProduct(
+    name: string,
+    directions: string,
+    stageId: number
+  ): Observable<any> {
+    const token = localStorage.getItem('jwt'); // Replace with your JWT token
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    const body = {
+      name,
+      directions,
+      stageId,
+    };
+
+    return this.http.post(this.apiUrlAddProduct, body, { headers });
   }
 }
