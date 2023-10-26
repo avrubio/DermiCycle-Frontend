@@ -14,6 +14,11 @@ DermiCycle is an application designed to help users manage their skincare routin
 - Product List: The application provides a list that allows users to customize their skin cycling pattern for the entire month.
 - Product Tracking: Users can input the skincare products they have for each stage and manage their routine.
 
+## Technologies Used
+- Angular
+- TypeScript
+- Bootstrap
+
 ## WireFrames
 
 ### Login Page
@@ -30,3 +35,17 @@ DermiCycle is an application designed to help users manage their skincare routin
 
 ### Daily Product List Page
 <img src="WireframeProductList.png"/>
+
+## Installation Guide
+
+`git clone <this repo url>`
+
+make sure to head to the backend api to have this application work with the api calls 
+(https://github.com/avrubio/DermiCycle-BackEnd)
+
+
+ `cd /dermicycle-frontend`
+ `npm install`
+`ng serve -o`
+## Acknowledgements
+[Leo Rodriguez](https://github.com/LRodriguez92) - helped me properly set up my API calls to make sure I was retrieving the proper response.
