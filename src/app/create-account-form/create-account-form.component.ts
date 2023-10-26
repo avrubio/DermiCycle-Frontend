@@ -2,7 +2,9 @@ import {
   Component,
   OnInit,
 } from '@angular/core';
+import { Router } from '@angular/router';
 
+import { SkincycleService } from '../services/skincycle.service';
 import { UserService } from '../services/user.service';
 
 @Component({
@@ -19,7 +21,11 @@ export class CreateAccountFormComponent implements OnInit {
     skinType: '',
   };
 
-  constructor(private signupService: UserService) {}
+  constructor(
+    private signupService: UserService,
+    private skincycleService: SkincycleService,
+    private router: Router
+  ) {}
 
   signUp(): void {
     this.signupService
@@ -33,6 +39,10 @@ export class CreateAccountFormComponent implements OnInit {
       .subscribe(
         (response) => {
           console.log('Account signup successful', response);
+          this.skincycleService.setUserSkinCyclePreference(
+            this.user.skinCyclePreference
+          );
+          this.router.navigate(['/addproduct']);
         },
         (error) => {
           console.error('Account signup failed', error);

@@ -1,10 +1,11 @@
 .form-container {
-  margin: 100px auto;
+  margin: -14% auto;
   background-color: #fce7b6;
   padding: 25px 25px 25px 25px;
   width: 400px;
   height: 350px;
   border-radius: 30px;
+  margin-right: 25%;
 }
 
 .btn {

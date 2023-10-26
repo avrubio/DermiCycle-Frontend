@@ -11,7 +11,12 @@ import { AppComponent } from './app.component';
 import {
   CreateAccountFormComponent,
 } from './create-account-form/create-account-form.component';
+import {
+  DermicycleDescriptionComponent,
+} from './landing/dermicycle-description/dermicycle-description.component';
+import { LandingComponent } from './landing/landing.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { ProductpageComponent } from './productpage/productpage.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,9 @@ import { LoginFormComponent } from './login-form/login-form.component';
     LoginFormComponent,
     CreateAccountFormComponent,
     AddProductComponent,
-
+    LandingComponent,
+    DermicycleDescriptionComponent,
+    ProductpageComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,9 +34,8 @@ import { LoginFormComponent } from './login-form/login-form.component';
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-
   ],
- 
+
   providers: [],
   bootstrap: [AppComponent],
 })
