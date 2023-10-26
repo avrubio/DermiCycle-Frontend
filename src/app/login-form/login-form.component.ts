@@ -15,7 +15,6 @@ export class LoginFormComponent implements OnInit {
     emailAddress: '',
     password: '',
   };
-  jwt: string = '';
 
   constructor(private loginService: UserService) {}
 
@@ -26,8 +25,7 @@ export class LoginFormComponent implements OnInit {
         (response) => {
           console.log('Login successful', response);
           // Handle successful login here (e.g., set user session, redirect, etc.)
-          this.jwt = response.jwt;
-          console.log(this.jwt);
+          localStorage.setItem('jwt', response.jwt);
         },
         (error) => {
           console.error('Login failed', error);
