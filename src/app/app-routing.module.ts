@@ -10,6 +10,7 @@ import {
 } from './create-account-form/create-account-form.component';
 import { LandingComponent } from './landing/landing.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { ProductpageComponent } from './productpage/productpage.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,11 @@ const routes: Routes = [
   {
     path: '',
     component: LandingComponent,
+  },
+
+  {
+    path: 'stage',
+    component: ProductpageComponent,
   },
 ];
 

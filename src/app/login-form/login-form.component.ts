@@ -2,6 +2,7 @@ import {
   Component,
   OnInit,
 } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { UserService } from '../services/user.service';
 
@@ -16,7 +17,7 @@ export class LoginFormComponent implements OnInit {
     password: '',
   };
 
-  constructor(private loginService: UserService) {}
+  constructor(private loginService: UserService, private router: Router) {}
 
   login(): void {
     this.loginService
@@ -26,6 +27,7 @@ export class LoginFormComponent implements OnInit {
           console.log('Login successful', response);
           // Handle successful login here (e.g., set user session, redirect, etc.)
           localStorage.setItem('jwt', response.jwt);
+          this.router.navigate(['/stage']);
         },
         (error) => {
           console.error('Login failed', error);
