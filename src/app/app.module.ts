@@ -16,6 +16,7 @@ import {
 } from './landing/dermicycle-description/dermicycle-description.component';
 import { LandingComponent } from './landing/landing.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { ProductpageComponent } from './productpage/productpage.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
     AddProductComponent,
     LandingComponent,
     DermicycleDescriptionComponent,
+    ProductpageComponent,
   ],
   imports: [
     BrowserModule,
