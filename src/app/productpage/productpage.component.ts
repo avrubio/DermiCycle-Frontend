@@ -11,6 +11,8 @@ import { SkincycleService } from '../services/skincycle.service';
   styleUrls: ['./productpage.component.css'],
 })
 export class ProductpageComponent implements OnInit {
+  data: any;
+
   constructor(private skincycleService: SkincycleService) {}
 
   ngOnInit(): void {
@@ -19,9 +21,10 @@ export class ProductpageComponent implements OnInit {
 
     // Use the current stage to fetch products for that stage
     this.skincycleService.getProductsForCurrentStage(currentStage).subscribe(
-      (data) => {
-        console.log('Received products for the current stage:', data);
-        // Handle the data as needed
+      (response) => {
+        console.log('Received products for the current stage:', response);
+        this.data = response; // Assign the 'data' property of the response to this.data
+        console.log(this.data.data[0]);
       },
       (error) => {
         console.error('Error while fetching products:', error);
