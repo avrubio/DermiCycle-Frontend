@@ -8,25 +8,30 @@ import { AddProductComponent } from './add-product/add-product.component';
 import {
   CreateAccountFormComponent,
 } from './create-account-form/create-account-form.component';
+import { LandingComponent } from './landing/landing.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 
 const routes: Routes = [
-
-{
+  {
     path: 'login',
-    component: LoginFormComponent
-},
-{
+    component: LoginFormComponent,
+  },
+  {
     path: 'signup',
-    component: CreateAccountFormComponent
-} , {
-  path: 'addproduct',
-  component: AddProductComponent
-},
+    component: CreateAccountFormComponent,
+  },
+  {
+    path: 'addproduct',
+    component: AddProductComponent,
+  },
+  {
+    path: '',
+    component: LandingComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
