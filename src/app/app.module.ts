@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import {
   CreateAccountFormComponent,
 } from './create-account-form/create-account-form.component';
+import { LandingComponent } from './landing/landing.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
@@ -19,7 +20,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
     LoginFormComponent,
     CreateAccountFormComponent,
     AddProductComponent,
-
+    LandingComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,9 +28,8 @@ import { LoginFormComponent } from './login-form/login-form.component';
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-
   ],
- 
+
   providers: [],
   bootstrap: [AppComponent],
 })
