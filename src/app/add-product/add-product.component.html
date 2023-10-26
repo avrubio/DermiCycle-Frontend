@@ -1,14 +1,21 @@
-<p>add-product works!</p>
 <section class="form-container">
-  <form>
+  <form (ngSubmit)="addProduct()">
     <div class="mb-3">
-      <label for="exampleInputProductName" class="form-label"
+      <label
+        for="exampleInputProductName"
+        class="form-label"
+        [(ngModel)]="product.name"
+        name="name"
         >Product Name</label
       >
       <input type="productName" class="form-control" id="exampleProductName" />
     </div>
     <div class="mb-3">
-      <label for="exampleInputDirections" class="form-label"
+      <label
+        for="exampleInputDirections"
+        class="form-label"
+        [(ngModel)]="product.directions"
+        name="directions"
         >Directions of Use
       </label>
       <input
@@ -26,9 +33,12 @@
       <div class="form-check">
         <input
           class="form-check-input"
-          type="checkbox"
+          type="radio"
           value="skinCyclePreference"
           id="flexCheckDefault"
+          value="1"
+          [(ngModel)]="product.stageId"
+          name="stageId"
         />
         <label class="form-check-label" for="flexCheckDefault">
           Stage 1: Exfoliation
@@ -37,10 +47,12 @@
       <div class="form-check">
         <input
           class="form-check-input"
-          type="checkbox"
-          value=""
+          type="radio"
+          value="2"
           id="flexCheckChecked"
           checked
+          [(ngModel)]="product.stageId"
+          name="stageId"
         />
         <label class="form-check-label" for="flexCheckChecked">
           Stage 2: Retnoid
@@ -49,10 +61,12 @@
       <div class="form-check">
         <input
           class="form-check-input"
-          type="checkbox"
-          value=""
+          type="radio"
+          value="3"
           id="flexCheckChecked"
           checked
+          [(ngModel)]="product.stageId"
+          name="stageId"
         />
         <label class="form-check-label" for="flexCheckChecked">
           Stage 3: Recovery
