@@ -1,4 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpHeaders,
+} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import * as moment from 'moment';
@@ -39,6 +42,11 @@ export class SkincycleService {
   stageId = this.getCurrentStage();
   // Call this method when you want to get the products for the current stage
   getProductsForCurrentStage(stageId: any) {
-    return this.http.get(`http://localhost:0317/api/users/stage/${stageId}/`);
+    const token = localStorage.getItem('jwt'); // Replace with your JWT token
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+
+    return this.http.get(`http://localhost:0317/api/users/stage/${stageId}/`, {
+      headers,
+    });
   }
 }
