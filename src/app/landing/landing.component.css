@@ -1,0 +1,7 @@
+body {
+  display: flex;
+}
+
+app-login-form {
+  /* right: 200px; */
+}
