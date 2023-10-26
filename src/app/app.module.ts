@@ -11,6 +11,9 @@ import { AppComponent } from './app.component';
 import {
   CreateAccountFormComponent,
 } from './create-account-form/create-account-form.component';
+import {
+  DermicycleDescriptionComponent,
+} from './landing/dermicycle-description/dermicycle-description.component';
 import { LandingComponent } from './landing/landing.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 
@@ -21,6 +24,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
     CreateAccountFormComponent,
     AddProductComponent,
     LandingComponent,
+    DermicycleDescriptionComponent,
   ],
   imports: [
     BrowserModule,
