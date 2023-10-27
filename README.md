@@ -1,3 +1,5 @@
+<img src="/DermiCycleBanner1.png"/>
+
 # DermiCycleFrontend
 
 DermiCycle is a skincare cycling application that allows you to track what products to use at what stage.
