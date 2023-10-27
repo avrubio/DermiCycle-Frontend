@@ -1,0 +1,16 @@
+section {
+  /* margin: -14% auto; */
+  background-color: #b6bcfc;
+  padding: 25px 25px 25px 25px;
+  width: 400px;
+  height: 350px;
+  border-radius: 30px;
+  margin-left: 35%;
+  margin-top: 5%;
+}
+
+li {
+  text-align: center;
+  text-decoration: none;
+  list-style: none;
+}

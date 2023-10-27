@@ -24,7 +24,7 @@ export class ProductpageComponent implements OnInit {
       (response) => {
         console.log('Received products for the current stage:', response);
         this.data = response; // Assign the 'data' property of the response to this.data
-        console.log(this.data.data[0]);
+        console.log(this.data.data[0].stageDescription);
       },
       (error) => {
         console.error('Error while fetching products:', error);
