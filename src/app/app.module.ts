@@ -15,7 +15,7 @@ import {
   DermicycleDescriptionComponent,
 } from './landing/dermicycle-description/dermicycle-description.component';
 import { LandingComponent } from './landing/landing.component';
-import { LoginFormComponent } from './login-form/login-form.component';
+import { LoginFormComponent } from './landing/login-form/login-form.component';
 import { ProductpageComponent } from './productpage/productpage.component';
 
 @NgModule({

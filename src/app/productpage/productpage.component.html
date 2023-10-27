@@ -1,3 +1,15 @@
-<p>productpage works!</p>
-
-<h1>Today is an day!</h1>
+<section>
+  <div *ngIf="data && data.data.length > 0">
+    <h1>Today is {{ data.data[0].stageDescription }} day!</h1>
+    <ul>
+      <p>You need to use the following products today</p>
+      <li *ngFor="let product of data.data">
+        {{ product.productName }}
+      </li>
+    </ul>
+  </div>
+  <img src="/src/assets/imgs/skincare.png" alt="" srcset="" />
+  <div *ngIf="data && data.length === 0">
+    <p>No products available for the current stage.</p>
+  </div>
+</section>

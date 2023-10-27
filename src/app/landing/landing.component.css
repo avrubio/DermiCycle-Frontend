@@ -1,7 +1,19 @@
-body {
+.container {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 20px;
+
+  margin-top: 20px;
 }
 
-app-login-form {
-  /* right: 200px; */
+/* Add responsive styles as needed */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .content {
+    margin-bottom: 20px;
+  }
 }

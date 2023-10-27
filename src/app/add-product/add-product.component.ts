@@ -2,6 +2,7 @@ import {
   Component,
   OnInit,
 } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { UserService } from '../services/user.service';
 
@@ -17,7 +18,7 @@ export class AddProductComponent implements OnInit {
     stageId: 0,
   };
 
-  constructor(private productService: UserService) {}
+  constructor(private productService: UserService, private router: Router) {}
 
   addProduct(): void {
     this.productService
@@ -30,6 +31,7 @@ export class AddProductComponent implements OnInit {
         (response) => {
           console.log('Adding product successful', response);
           // Handle successful login here (e.g., set user session, redirect, etc.)
+          this.router.navigate(['/stage']);
         },
         (error) => {
           console.error('Adding product failed', error);

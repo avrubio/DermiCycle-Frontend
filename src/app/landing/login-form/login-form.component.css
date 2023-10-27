@@ -1,11 +1,14 @@
 .form-container {
-  margin: -14% auto;
-  background-color: #fce7b6;
+  margin: 0 auto;
+  background-color: #b1ffaed1;
   padding: 25px 25px 25px 25px;
   width: 400px;
   height: 350px;
   border-radius: 30px;
   margin-right: 25%;
+  /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 .btn {
