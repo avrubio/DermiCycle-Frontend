@@ -5,6 +5,8 @@
   height: 600px;
   border-radius: 30px;
   top: 10px;
+  box-shadow: rgb(136, 168, 203) 0px 20px 30px -10px;
+  margin: 0 auto;
 }
 
 .btn {
